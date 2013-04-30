@@ -4,9 +4,14 @@
   # Before starting, edit the "DATABASE" section in config.cfg with your custom values
 
 ===Automatic Mode===
-With automatic mode data types in CSV file are detected automatically by reading the first lines of csv. The table is automatically created using the first line of CSV (header) to name columns and the CSV is automatically loaded.
+With automatic mode data types in CSV file are detected automatically by reading the first lines of CSV. The table is automatically created using the first line of CSV (header) to name columns and the CSV is automatically loaded.
   # Put the CSV file you want to load in the "csv" folder
   # Run load.bat
 
 
 ===Manual Mode===
+With manual mode data types are in CSV file are detected automatically, but you can check and customize them before actually loading the data into database.
+  # Put the CSV file you want to load in the "csv" folder
+  # Run manual_config.bat
+  # Check and customize the CSV configuration file created in custom_config folder
+  # Run load.bat to load the CSV using your custom configuration
