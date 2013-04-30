@@ -1,13 +1,12 @@
-#Getting started with Oracle CSV Loader.
+== Basic Usage ==
 
-= Introduction =
+===Requirements===
+  # Before starting, edit the "DATABASE" section in config.cfg with your custom values
 
-Add your content here.
-
-
-= Basic Usage =
-
-Add your content here.  Format your content with:
-  # Edit the [DATABASE] section in config.cfg with your custom values
+===Automatic Mode===
+With automatic mode data types in CSV file are detected automatically by reading the first lines of csv. The table is automatically created using the first line of CSV (header) to name columns and the CSV is automatically loaded.
   # Put the CSV file you want to load in the "csv" folder
   # Run load.bat
+
+
+===Manual Mode===
