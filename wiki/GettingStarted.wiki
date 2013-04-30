@@ -1,0 +1,13 @@
+#Getting started with Oracle CSV Loader.
+
+= Introduction =
+
+Add your content here.
+
+
+= Basic Usage =
+
+Add your content here.  Format your content with:
+  # Edit the [DATABASE] section in config.cfg with your custom values
+  # Put the CSV file you want to load in the "csv" folder
+  # Run load.bat
