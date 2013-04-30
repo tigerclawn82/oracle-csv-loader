@@ -1,7 +1,7 @@
 == Basic Usage ==
 
 ===Requirements===
-  # Before starting, edit the "DATABASE" section in config.cfg with your custom values
+  # Before starting, edit the "DATABASE" section in loader.cfg with your custom values
 
 ===Automatic Mode===
 With automatic mode data types in CSV file are detected automatically by reading the first lines of CSV. The table is automatically created using the first line of CSV (header) to name columns and the CSV is automatically loaded.
@@ -15,3 +15,17 @@ With manual mode data types are in CSV file are detected automatically, but you 
   # Run manual_config.bat
   # Check and customize the CSV configuration file created in custom_config folder
   # Run load.bat to load the CSV using your custom configuration
+
+
+
+==Advanced Usage==
+When loader is called with no options at all, the following actions are performed for all the .csv and .txt files in "csv" folder
+  # loader reads the first lines of csv file and detect data types, then write these informations in a configuration (.conf) file. If the configuration file already exists in the custom_config directory, it is used instead of creating a new one.
+  # loader creates the sql loader control file and the sql "create table" file using the information loaded from the configuration (.conf) file
+  # loader creates a batch file that perform the table creation and the data loading on database
+  # loader runs the batch file
+
+===Command line Options===
+  * *-f file* loads only the specified file, default is all .txt and .csv files  
+  * *-m* creates a csv configuration file that can be manually edited before loading data
+  * *-n* creates the batch file to load the data but doesn't load the data automatically
