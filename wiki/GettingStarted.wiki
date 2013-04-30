@@ -3,7 +3,7 @@
 
 ===Requirements===
 Before starting, open loader.cfg and edit:
-  * The "DATABASE" section in loader.cfg with your custom database values
+  * The "DATABASE" section with your custom database values
   * The "CSV" section with the custom informations about your csv file
 
 ===Automatic Mode===
