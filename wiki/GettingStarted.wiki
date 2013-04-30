@@ -29,3 +29,6 @@ When loader is called with no options at all, the following actions are performe
   * *-f file* loads only the specified file, default is all .txt and .csv files  
   * *-m* creates a csv configuration file that can be manually edited before loading data
   * *-n* creates the batch file to load the data but doesn't load the data automatically
+
+===Configuration===
+For advanced configuration check and customize loader.cfg and use the manual mode (-m)
