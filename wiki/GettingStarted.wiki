@@ -1,4 +1,24 @@
 #labels Featured
+== Overview ==
+
+When loader is called with no options at all, the following actions are performed for all the .csv and .txt files in "csv" folder
+  # loader reads the first lines of csv file and detect data types, then write these informations in a configuration (.conf) file. If the configuration file already exists in the custom_config directory, it is used instead of creating a new one.
+  # loader creates the sql loader control file and the sql "create table" file using the information loaded from the configuration (.conf) file
+  # loader creates a batch file that perform the table creation and the data loading on database
+  # loader runs the batch file
+
+===Data Type Detection===
+Oracle CSV Loader detects data types reading the first lines of CSV file
+
+Supported data types so far are:
+  * number (integer or float)
+  * date
+  * varchar2
+
+If no particular type is detected for a column or types are mixed, it defaults to varchar2.
+
+More data types will be added soon.
+
 == Basic Usage ==
 
 ===Requirements===
@@ -22,11 +42,6 @@ With manual mode data types are in CSV file are detected automatically, but you 
 
 
 ==Advanced Usage==
-When loader is called with no options at all, the following actions are performed for all the .csv and .txt files in "csv" folder
-  # loader reads the first lines of csv file and detect data types, then write these informations in a configuration (.conf) file. If the configuration file already exists in the custom_config directory, it is used instead of creating a new one.
-  # loader creates the sql loader control file and the sql "create table" file using the information loaded from the configuration (.conf) file
-  # loader creates a batch file that perform the table creation and the data loading on database
-  # loader runs the batch file
 
 ===Command line Options===
   * *-f file* loads only the specified file, default is all .txt and .csv files  
